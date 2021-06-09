@@ -1,0 +1,14 @@
+{% extends "recommendations.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Best Suited Job Location</h1>
+        </div>
+         <div itemscope itemtype="https://schema.org/JobPosting">
+           <h2> Location:
+             <span itemprop="jobLocation">{{ predict_value }} </span>
+           </h2>
+         </div>
+    </div>
+{% endblock %}

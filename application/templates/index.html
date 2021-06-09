@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Job Finder</h1>
+            <p></p>
+            <p> Enter in a location and our system will search the best job posts in the UK for that location.</p>
+            </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" placeholder="Type to search..">
+          <div class="autocom-box">
+          </div>
+          <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/suggestions.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/locations_suggestions.js') }}"></script>
+
+{% endblock %}

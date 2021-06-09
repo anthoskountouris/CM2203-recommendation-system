@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <h1>Welcome to Job Recommender</h1>
+                <p></p>
+                <p> Enter in a Job post and our system will recommend the best location in the UK for that post</p>
+                <p>Once you have entered a Job post, click submit. Then click search</p>
+            </div>
+    </div>
+    <div class="wrapper">
+    <div class="search-input">
+        <form method="POST">
+            <input name="text">
+            <input type="submit">
+        </form>
+        <form id= "results" action="{{ url_for('result', d= user_data) }}" method="POST">
+            <input type="submit" value= "Search">
+        </form>
+
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <div id="find_container">
+        <div class="find_title">
+            <h1>Search Our Database For a Job</h1>
+        </div>
+        <div class="search_bar">
+            <form method="post">
+                {{ form.csrf_token }}
+                {{ form.search_job }}
+                {{ form.search }}
+            </form>
+        </div>
+        <ul class="search_users">
+        <table>
+          <tr>
+            <th>Company Name</th>
+            <th>Post</th>
+            <th>Location</th>
+            <th>Level</th>
+            <th>Type</th>
+            <th>Function</th>
+            <th>Industry</th>
+          </tr>
+          {% for entry in search_job %}
+                <tr>
+                  <td>{{entry.company_name}}</td>
+                  <td>{{entry.post}}</td>
+                  <td>{{entry.location}}</td>
+                  <td>{{entry.level}}</td>
+                  <td>{{entry.type}}</td>
+                  <td>{{entry.function}}</td>
+                  <td>{{entry.industry}}</td>
+                </tr>
+          {% endfor %}
+        </table></ul>
+    </div>
+
+{% endblock %}
